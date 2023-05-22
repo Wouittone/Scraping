@@ -1,9 +1,6 @@
 name: scraping
-prefix: /home/greg/mambaforge/envs/scraping
 channels:
   - conda-forge
-platforms:
-  - linux-64
 dependencies:
   - python=3.10
   - geckodriver
@@ -13,6 +10,12 @@ dependencies:
   - polars
   - seaborn
   - tenacity
+
+  # https://github.com/conda/conda-lock/issues/413
+  # Requires installing conda-lock from GitHub (in conda base environment)
+  # $ python -m pip install git+https://github.com/conda/conda-lock.git   
   - pip:
-      - arsenic
-      - price-parser
+    - arsenic
+    - price-parser
+platforms:
+  - linux-64
