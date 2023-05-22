@@ -1,0 +1,7 @@
+name: scraping
+channels:
+  - conda-forge
+dependencies:
+  - jupyterlab
+  - black
+category: dev
